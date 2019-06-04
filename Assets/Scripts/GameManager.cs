@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem.Plugins.PlayerInput;
 
 public class GameManager : MonoBehaviour
 {
@@ -16,13 +17,22 @@ public class GameManager : MonoBehaviour
     public GameObject playerRed;
 
     private bool isGameOver = false;
-    // Start is called before the first frame update
+
+    private List<GameObject> spawns = new List<GameObject>();
+    private int nextSpawn = 0;
     void Start()
     {
-        
-    }
+        foreach (var go in GameObject.FindGameObjectsWithTag("SpawnPoint"))
+        {
+            spawns.Add(go);
+        }
 
-    // Update is called once per frame
+        if (spawns.Count == 0)
+        {
+            Debug.LogError("No spawn points created");
+        }
+    }
+    
     void Update()
     {
         if(playerBluePoints >= goalToWin || playerRedPoints >= goalToWin) {
@@ -41,5 +51,16 @@ public class GameManager : MonoBehaviour
         {
             playerRedPoints++;
         }
+    }
+
+    void OnPlayerJoined(PlayerInput pl)
+    {
+        GameObject spawn = spawns[nextSpawn++];
+        if (nextSpawn >= spawns.Count)
+        {
+            nextSpawn = 0;
+        }
+
+        pl.gameObject.transform.SetPositionAndRotation(spawn.transform.position, spawn.transform.rotation);
     }
 }

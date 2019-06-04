@@ -178,7 +178,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6813646017879189695}
-  - component: {fileID: 6813646017879189688}
+  - component: {fileID: 6114859636891437997}
   - component: {fileID: 6813646017879189694}
   - component: {fileID: 6813646017879189689}
   m_Layer: 0
@@ -204,7 +204,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6813646017879189688
+--- !u!114 &6114859636891437997
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -213,10 +213,35 @@ MonoBehaviour:
   m_GameObject: {fileID: 6813646017879189692}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4b5af4053c38da42a38ad9119342443, type: 3}
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerNumber: 1
+  m_Actions: {fileID: -944628639613478452, guid: 3eece5c342e9cd843b28d43e993f5920,
+    type: 3}
+  m_NotificationBehavior: 0
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.InputSystem.Plugins.PlayerInput.PlayerInput+DeviceLostEvent,
+      Unity.InputSystem, Version=0.2.10.0, Culture=neutral, PublicKeyToken=null
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.InputSystem.Plugins.PlayerInput.PlayerInput+DeviceRegainedEvent,
+      Unity.InputSystem, Version=0.2.10.0, Culture=neutral, PublicKeyToken=null
+  m_ActionEvents:
+  - m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.InputSystem.Plugins.PlayerInput.PlayerInput+ActionEvent,
+      Unity.InputSystem, Version=0.2.10.0, Culture=neutral, PublicKeyToken=null
+    m_ActionId: 996542f7-1984-4fa7-beeb-c24f39e9c181
+    m_ActionName: Game/Throttle
+  m_AutoSwitchControlScheme: 0
+  m_DefaultControlScheme: Gamepad
+  m_DefaultActionMap: 7aa1f092-6dd8-4d23-a2f3-63f25715657b
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}
 --- !u!114 &6813646017879189694
 MonoBehaviour:
   m_ObjectHideFlags: 0

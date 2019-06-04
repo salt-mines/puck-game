@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem.Plugins.PlayerInput;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -10,24 +11,34 @@ public class PlayerMovement : MonoBehaviour
     private Vector3 rotation = new Vector3();
 
     private Rigidbody body;
-    private PlayerInput input;
+
+    private float throttle;
+    private float turn;
 
     void Start()
     {
         body = GetComponent<Rigidbody>();
-        input = GetComponent<PlayerInput>();
     }
 
-    void Update()
+    void OnThrottle(InputValue value)
+    {
+        throttle = value.Get<float>();
+    }
+
+    void OnTurn(InputValue value)
+    {
+        turn = value.Get<float>();
+    }
+
+    void FixedUpdate()
     {
         rotation.Set(
             0,
-            input.horizontal,
+            turn,
             0
         );
 
         body.angularVelocity = rotation * rotationSpeed;
-
-        body.velocity = transform.forward * input.throttle * speed;
+        body.velocity = transform.forward * throttle * speed;
     }
 }

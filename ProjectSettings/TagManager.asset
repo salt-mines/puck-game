@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Collector
   - Collectible
+  - SpawnPoint
   layers:
   - Default
   - TransparentFX

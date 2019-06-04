@@ -1,0 +1,73 @@
+{
+    "name": "PlayerActions",
+    "maps": [
+        {
+            "name": "Game",
+            "id": "7aa1f092-6dd8-4d23-a2f3-63f25715657b",
+            "actions": [
+                {
+                    "name": "Throttle",
+                    "id": "996542f7-1984-4fa7-beeb-c24f39e9c181",
+                    "expectedControlLayout": "Analog",
+                    "continuous": true,
+                    "passThrough": false,
+                    "initialStateCheck": false,
+                    "processors": "",
+                    "interactions": "",
+                    "bindings": []
+                },
+                {
+                    "name": "Turn",
+                    "id": "373bfdb4-0266-4161-a14c-085241a15add",
+                    "expectedControlLayout": "Analog",
+                    "continuous": true,
+                    "passThrough": false,
+                    "initialStateCheck": false,
+                    "processors": "",
+                    "interactions": "",
+                    "bindings": []
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "bd7910ae-9356-4406-b7af-69fdc86413ed",
+                    "path": "<Gamepad>/rightTrigger",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Default;Gamepad",
+                    "action": "Throttle",
+                    "isComposite": false,
+                    "isPartOfComposite": false,
+                    "modifiers": ""
+                },
+                {
+                    "name": "",
+                    "id": "ec5c80b7-fa0f-4691-b957-dd38116c9ea1",
+                    "path": "<Gamepad>/leftStick/x",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Gamepad",
+                    "action": "Turn",
+                    "isComposite": false,
+                    "isPartOfComposite": false,
+                    "modifiers": ""
+                }
+            ]
+        }
+    ],
+    "controlSchemes": [
+        {
+            "name": "Gamepad",
+            "basedOn": "",
+            "bindingGroup": "Gamepad",
+            "devices": [
+                {
+                    "devicePath": "<Gamepad>",
+                    "isOptional": false,
+                    "isOR": false
+                }
+            ]
+        }
+    ]
+}

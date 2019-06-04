@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class PuckScript : MonoBehaviour
 {
-    [SerializeField]
-    private GameObject PreviousPlayerTouched;
+    
+    internal GameObject previousPlayerTouched;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,7 +23,7 @@ public class PuckScript : MonoBehaviour
         if(collision.gameObject.tag == "Player")
         {
             //vaihda kiekon väri pelaajan väriksi
-            PreviousPlayerTouched = collision.gameObject;
+            previousPlayerTouched = collision.gameObject;
         }
     }
 }

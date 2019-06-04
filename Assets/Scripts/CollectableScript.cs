@@ -15,4 +15,12 @@ public class CollectableScript : MonoBehaviour
     {
         
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Collector") {
+            //if (other.gameObject.GetComponent<PuckScript>().previousPlayerTouched == GameManager)
+            Destroy(gameObject);
+        }
+    }
 }

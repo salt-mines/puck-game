@@ -10,23 +10,24 @@ public class PlayerMovement : MonoBehaviour
     private Vector3 rotation = new Vector3();
 
     private Rigidbody body;
-
+    private PlayerInput input;
 
     void Start()
     {
         body = GetComponent<Rigidbody>();
+        input = GetComponent<PlayerInput>();
     }
 
     void Update()
     {
         rotation.Set(
             0,
-            Input.GetAxisRaw("Horizontal"),
+            input.horizontal,
             0
         );
 
         body.angularVelocity = rotation * rotationSpeed;
 
-        body.velocity = transform.forward * Input.GetAxisRaw("Vertical") * speed;
+        body.velocity = transform.forward * input.throttle * speed;
     }
 }

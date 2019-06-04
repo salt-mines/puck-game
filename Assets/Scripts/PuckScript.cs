@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class PuckScript : MonoBehaviour
 {
-    
     internal GameObject previousPlayerTouched;
+
     // Start is called before the first frame update
     void Start()
     {

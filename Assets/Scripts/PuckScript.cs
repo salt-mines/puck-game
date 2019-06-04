@@ -22,8 +22,8 @@ public class PuckScript : MonoBehaviour
     {
         if(collision.gameObject.tag == "Player")
         {
+            //vaihda kiekon väri pelaajan väriksi
             PreviousPlayerTouched = collision.gameObject;
-            Debug.Log(collision.gameObject);
         }
     }
 }

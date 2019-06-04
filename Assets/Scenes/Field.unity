@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44018415, g: 0.48871434, b: 0.56889707, a: 1}
+  m_IndirectSpecularColor: {r: 0.44018388, g: 0.48871392, b: 0.56889653, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -982,6 +982,7 @@ GameObject:
   - component: {fileID: 1591618812}
   - component: {fileID: 1591618811}
   - component: {fileID: 1591618815}
+  - component: {fileID: 1591618816}
   m_Layer: 0
   m_Name: Cylinder
   m_TagString: Untagged
@@ -1078,6 +1079,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1591618816
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1591618810}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 913144b08844e6b49b14d8e46597bc94, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PreviousPlayerTouched: {fileID: 0}
 --- !u!1 &1704704546
 GameObject:
   m_ObjectHideFlags: 0

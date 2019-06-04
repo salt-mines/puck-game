@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class CollectableScript : MonoBehaviour
 {
+    private GameManager GM;
     // Start is called before the first frame update
     void Start()
     {
-        
+        GM = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameManager>();
     }
 
     // Update is called once per frame
@@ -19,7 +20,7 @@ public class CollectableScript : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Collector") {
-            //if (other.gameObject.GetComponent<PuckScript>().previousPlayerTouched == GameManager)
+            GM.OnCollected(other.gameObject.GetComponent<PuckScript>().previousPlayerTouched);
             Destroy(gameObject);
         }
     }

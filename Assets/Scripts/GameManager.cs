@@ -12,8 +12,8 @@ public class GameManager : MonoBehaviour
     internal int playerBluePoints;
     internal int playerRedPoints;
 
-    public GameObject playerOne;
-    public GameObject playerTwo;
+    public GameObject playerBlue;
+    public GameObject playerRed;
 
     private bool isGameOver = false;
     // Start is called before the first frame update
@@ -28,5 +28,18 @@ public class GameManager : MonoBehaviour
         if(playerBluePoints >= goalToWin || playerRedPoints >= goalToWin) {
             isGameOver = true;
         }  
+    }
+
+    public void OnCollected(GameObject player)
+    {
+        Debug.Log("collected");
+        if (playerBlue == player)
+        {
+            playerBluePoints++;
+        }
+        if(playerRed == player)
+        {
+            playerRedPoints++;
+        }
     }
 }

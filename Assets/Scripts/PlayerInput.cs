@@ -14,10 +14,9 @@ public class PlayerInput : MonoBehaviour
     
     void Update()
     {
-        throttle = Input.GetAxis("Throttle " + playerNumber);
-        horizontal = Input.GetAxis("Horizontal " + playerNumber);
+        throttle = Input.GetAxisRaw("Throttle " + playerNumber);
+        horizontal = Input.GetAxisRaw("Horizontal " + playerNumber);
 
-        Debug.Log("asd");
         text.text = string.Format("{0}: {1:F2}; {2:F2}", playerNumber, throttle, horizontal);
     }
 }

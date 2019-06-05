@@ -24,8 +24,6 @@ public class GameManager : MonoBehaviour
     private bool isGameOver = false;
     private bool paused = false;
 
-    private List<GameObject> spawns = new List<GameObject>();
-    private int nextSpawn = 0;
     void Start()
     {
         foreach (var go in GameObject.FindGameObjectsWithTag("SpawnPoint"))
@@ -95,7 +93,9 @@ public class GameManager : MonoBehaviour
             pl.SwitchCurrentActionMap("UI");
         }
 
+        PlayerColors col = spawn.GetComponent<PlayerSpawn>().playerColor;
         allPlayers.Add(pl.gameObject, spawn.GetComponent<PlayerSpawn>().playerColor);
+        pl.gameObject.name = "Player " + pl.playerIndex + " (" + col + ")";
     }
 
     public enum PlayerColors

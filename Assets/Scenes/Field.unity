@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.117301255, g: 0.17979036, b: 0.23426849, a: 1}
+  m_IndirectSpecularColor: {r: 0.117301494, g: 0.17979094, b: 0.23426947, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -531,6 +531,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 440865150}
+  - component: {fileID: 440865151}
   m_Layer: 0
   m_Name: Spawn SW
   m_TagString: SpawnPoint
@@ -552,6 +553,19 @@ Transform:
   m_Father: {fileID: 2023705296}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 60, z: 0}
+--- !u!114 &440865151
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 440865149}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 611c543930ed0b544bb56dc41abce9f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerColor: 0
 --- !u!1 &467285534
 GameObject:
   m_ObjectHideFlags: 0
@@ -1040,6 +1054,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1015289805}
+  - component: {fileID: 1015289806}
   m_Layer: 0
   m_Name: Spawn NE
   m_TagString: SpawnPoint
@@ -1061,6 +1076,19 @@ Transform:
   m_Father: {fileID: 2023705296}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: -120, z: 0}
+--- !u!114 &1015289806
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1015289804}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 611c543930ed0b544bb56dc41abce9f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerColor: 1
 --- !u!1 &1026297630
 GameObject:
   m_ObjectHideFlags: 0
@@ -1170,6 +1198,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1027523527}
+  - component: {fileID: 1027523528}
   m_Layer: 0
   m_Name: Spawn NW
   m_TagString: SpawnPoint
@@ -1191,6 +1220,19 @@ Transform:
   m_Father: {fileID: 2023705296}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 120, z: 0}
+--- !u!114 &1027523528
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1027523526}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 611c543930ed0b544bb56dc41abce9f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerColor: 0
 --- !u!1 &1042677404
 GameObject:
   m_ObjectHideFlags: 0
@@ -1409,8 +1451,6 @@ MonoBehaviour:
   pauseMenu: {fileID: 8813333537259311605, guid: 04d3a1cb8b8c75c499753f96112db1cf,
     type: 3}
   goalToWin: 10
-  playerBlue: {fileID: 0}
-  playerRed: {fileID: 0}
 --- !u!4 &1356577814
 Transform:
   m_ObjectHideFlags: 0
@@ -1896,7 +1936,7 @@ Transform:
   m_GameObject: {fileID: 1591618810}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0.1, z: 0}
-  m_LocalScale: {x: 1, y: 0.1, z: 1}
+  m_LocalScale: {x: 2, y: 0.1, z: 2}
   m_Children: []
   m_Father: {fileID: 1704704547}
   m_RootOrder: 0
@@ -1938,6 +1978,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1626331350}
+  - component: {fileID: 1626331351}
   m_Layer: 0
   m_Name: Spawn SE
   m_TagString: SpawnPoint
@@ -1959,6 +2000,19 @@ Transform:
   m_Father: {fileID: 2023705296}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: -60, z: 0}
+--- !u!114 &1626331351
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1626331349}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 611c543930ed0b544bb56dc41abce9f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerColor: 1
 --- !u!1 &1704704546
 GameObject:
   m_ObjectHideFlags: 0
@@ -2163,7 +2217,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_StaticEditorFlags: 4294967294
   m_IsActive: 1
 --- !u!4 &2085851062
 Transform:

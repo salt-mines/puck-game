@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem.Plugins.PlayerInput;
 using UnityEngine.InputSystem.Plugins.UI;
+using TMPro;
 
 public class GameManager : MonoBehaviour
 {
@@ -20,6 +21,9 @@ public class GameManager : MonoBehaviour
 
     private bool isGameOver = false;
     private bool paused = false;
+
+    public TextMeshProUGUI bluePointsText;
+    public TextMeshProUGUI redPointsText;
 
     void Start()
     {
@@ -80,6 +84,8 @@ public class GameManager : MonoBehaviour
     public void OnCollected(GameObject player)
     {
         points[player.GetComponent<Player>().playerTeamColor]+=1;
+        bluePointsText.text = points[PlayerColors.Blue].ToString();
+        redPointsText.text = points[PlayerColors.Red].ToString();
         Debug.Log("collected");
     }
 

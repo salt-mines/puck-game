@@ -7,7 +7,7 @@ public class FlowerSpawner : MonoBehaviour
     Vector3 min;
     Vector3 max;
 
-    private int currAmount;
+    public int currAmount;
     public int maxAmount = 3;
 
     private float timeElapsed = 0f;

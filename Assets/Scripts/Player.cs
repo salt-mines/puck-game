@@ -10,6 +10,9 @@ public class Player : MonoBehaviour
 
     private PlayerInput playerInput;
 
+    private GameObject playerSpawnPoint;
+    public GameManager.PlayerColors playerTeamColor;
+
     void Start()
     {
         playerInput = GetComponent<PlayerInput>();

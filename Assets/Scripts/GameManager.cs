@@ -7,19 +7,12 @@ public class GameManager : MonoBehaviour
 {
     public int goalToWin = 10;
 
-    internal int playerBlueWins;
-    internal int playerRedWins;
-
-    internal int playerBluePoints;
-    internal int playerRedPoints;
-
-    public GameObject playerBlue;
-    public GameObject playerRed;
-
-    private bool isGameOver = false;
-
     private List<GameObject> spawns = new List<GameObject>();
     private int nextSpawn = 0;
+
+    private Dictionary<GameObject, PlayerColors> allPlayers = new Dictionary<GameObject, PlayerColors>();
+    private Dictionary<PlayerColors, int> points = new Dictionary<PlayerColors, int>();
+
     void Start()
     {
         foreach (var go in GameObject.FindGameObjectsWithTag("SpawnPoint"))
@@ -35,22 +28,13 @@ public class GameManager : MonoBehaviour
     
     void Update()
     {
-        if(playerBluePoints >= goalToWin || playerRedPoints >= goalToWin) {
-            isGameOver = true;
-        }  
+        
     }
 
     public void OnCollected(GameObject player)
     {
+        //points[player.team]
         Debug.Log("collected");
-        if (playerBlue == player)
-        {
-            playerBluePoints++;
-        }
-        if(playerRed == player)
-        {
-            playerRedPoints++;
-        }
     }
 
     void OnPlayerJoined(PlayerInput pl)
@@ -62,5 +46,13 @@ public class GameManager : MonoBehaviour
         }
 
         pl.gameObject.transform.SetPositionAndRotation(spawn.transform.position, spawn.transform.rotation);
+
+        allPlayers.Add(pl.gameObject, spawn.GetComponent<PlayerSpawn>().playerColor);
+    }
+
+    public enum PlayerColors
+    {
+        Blue,
+        Red,
     }
 }

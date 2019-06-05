@@ -15,17 +15,19 @@ public class PlayerMovement : MonoBehaviour
     {
         body = GetComponent<Rigidbody>();
         player = GetComponent<Player>();
+
+        body.maxAngularVelocity = 0;
     }
 
     void FixedUpdate()
     {
         rotation.Set(
             0,
-            player.turn,
+            player.turn * Mathf.Rad2Deg * rotationSpeed * Time.deltaTime,
             0
         );
-
-        body.angularVelocity = rotation * rotationSpeed;
+        
+        transform.Rotate(rotation);
         body.velocity = transform.forward * player.throttle * speed;
     }
 }

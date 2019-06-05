@@ -11,16 +11,10 @@ public class CollectableScript : MonoBehaviour
         GM = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameManager>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Collector") {
-            GM.OnCollected(other.gameObject.GetComponent<PuckScript>().previousPlayerTouched);
+            GM.OnCollected(other.gameObject.GetComponentInParent<PuckScript>().previousPlayerTouched);
             gameObject.GetComponentInParent<FlowerSpawner>().currAmount--;
             Destroy(gameObject);
         }

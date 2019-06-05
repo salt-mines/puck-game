@@ -21,6 +21,7 @@ public class CollectableScript : MonoBehaviour
     {
         if (other.gameObject.tag == "Collector") {
             GM.OnCollected(other.gameObject.GetComponent<PuckScript>().previousPlayerTouched);
+            gameObject.GetComponentInParent<FlowerSpawner>().currAmount--;
             Destroy(gameObject);
         }
     }

@@ -16,7 +16,6 @@ public class GameManager : MonoBehaviour
     private List<GameObject> spawns = new List<GameObject>();
     private int nextSpawn = 0;
 
-    private Dictionary<GameObject, PlayerColors> allPlayers = new Dictionary<GameObject, PlayerColors>();
     private Dictionary<PlayerColors, int> points = new Dictionary<PlayerColors, int>();
 
     private bool isGameOver = false;
@@ -33,11 +32,27 @@ public class GameManager : MonoBehaviour
         {
             Debug.LogError("No spawn points created");
         }
+
+        points[PlayerColors.Red] = 0;
+        points[PlayerColors.Blue] = 0;
     }
     
     void Update()
     {
-        
+        GameOverCheck();
+    }
+    
+    void GameOverCheck()
+    {
+        if(goalToWin<=points[PlayerColors.Red] || goalToWin <= points[PlayerColors.Blue])
+        {
+            isGameOver = true;
+            Pause();
+        }
+        else
+        {
+            isGameOver = false;
+        }
     }
 
     internal void Pause()
@@ -64,7 +79,7 @@ public class GameManager : MonoBehaviour
 
     public void OnCollected(GameObject player)
     {
-        //points[player.team]
+        points[player.GetComponent<Player>().playerTeamColor]+=1;
         Debug.Log("collected");
     }
 
@@ -85,7 +100,7 @@ public class GameManager : MonoBehaviour
         }
 
         PlayerColors col = spawn.GetComponent<PlayerSpawn>().playerColor;
-        allPlayers.Add(pl.gameObject, spawn.GetComponent<PlayerSpawn>().playerColor);
+        pl.GetComponent<Player>().playerTeamColor = col;
         pl.gameObject.name = "Player " + pl.playerIndex + " (" + col + ")";
     }
 

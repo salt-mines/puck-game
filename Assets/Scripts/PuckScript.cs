@@ -4,19 +4,9 @@ using UnityEngine;
 
 public class PuckScript : MonoBehaviour
 {
+    public GameManager gameManager;
+
     internal GameObject previousPlayerTouched;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     private void OnCollisionEnter(Collision collision)
     {
@@ -24,6 +14,8 @@ public class PuckScript : MonoBehaviour
         {
             //vaihda kiekon väri pelaajan väriksi
             previousPlayerTouched = collision.gameObject;
+
+            gameManager.ChangeMowerColor(gameObject, previousPlayerTouched.GetComponent<Player>().playerTeamColor);
         }
     }
 }

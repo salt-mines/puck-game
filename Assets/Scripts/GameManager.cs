@@ -11,6 +11,11 @@ public class GameManager : MonoBehaviour
     public GameObject pauseMenuPrefab;
     public GameObject startMenuPrefab;
 
+    public Material bluePlayerMaterial;
+    public Material redPlayerMaterial;
+    public Material blueMowerMaterial;
+    public Material redMowerMaterial;
+
     public int goalToWin = 10;
 
     private List<GameObject> spawns = new List<GameObject>();
@@ -112,6 +117,19 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 1;
     }
 
+    internal void ChangeMowerColor(GameObject mower, PlayerColors color)
+    {
+        switch(color)
+        {
+            case PlayerColors.Blue:
+                mower.GetComponentInChildren<MeshRenderer>().material = blueMowerMaterial;
+                break;
+            case PlayerColors.Red:
+                mower.GetComponentInChildren<MeshRenderer>().material = redMowerMaterial;
+                break;
+        }
+    }
+
     public void OnCollected(GameObject player)
     {
         points[player.GetComponent<Player>().playerTeamColor]+=1;
@@ -133,6 +151,16 @@ public class GameManager : MonoBehaviour
         PlayerColors col = spawn.GetComponent<PlayerSpawn>().playerColor;
         pl.GetComponent<Player>().playerTeamColor = col;
         pl.gameObject.name = "Player " + pl.playerIndex + " (" + col + ")";
+
+        switch(col)
+        {
+            case PlayerColors.Blue:
+                pl.GetComponentInChildren<SkinnedMeshRenderer>().material = bluePlayerMaterial;
+                break;
+            case PlayerColors.Red:
+                pl.GetComponentInChildren<SkinnedMeshRenderer>().material = redPlayerMaterial;
+                break;
+        }
     }
 
     public enum PlayerColors

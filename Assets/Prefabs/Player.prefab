@@ -238,7 +238,7 @@ MonoBehaviour:
     m_ActionId: 996542f7-1984-4fa7-beeb-c24f39e9c181
     m_ActionName: Game/Throttle
   m_AutoSwitchControlScheme: 0
-  m_DefaultControlScheme: Gamepad
+  m_DefaultControlScheme: 
   m_DefaultActionMap: 7aa1f092-6dd8-4d23-a2f3-63f25715657b
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}

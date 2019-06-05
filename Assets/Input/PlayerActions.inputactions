@@ -147,7 +147,7 @@
                     "id": "45a9e8a4-fd6a-4655-9ff5-460b4efe0ce2",
                     "expectedControlLayout": "Vector2",
                     "continuous": false,
-                    "passThrough": false,
+                    "passThrough": true,
                     "initialStateCheck": false,
                     "processors": "",
                     "interactions": "",
@@ -158,7 +158,7 @@
                     "id": "0b1537ba-5d09-4cb4-bcdc-e11959692574",
                     "expectedControlLayout": "Button",
                     "continuous": false,
-                    "passThrough": false,
+                    "passThrough": true,
                     "initialStateCheck": false,
                     "processors": "",
                     "interactions": "",
@@ -200,7 +200,7 @@
             ],
             "bindings": [
                 {
-                    "name": "2D Vector",
+                    "name": "Left Stick",
                     "id": "8bf6d969-bdfd-4e5a-bc5b-3a8ccc8d789a",
                     "path": "2DVector",
                     "interactions": "",
@@ -317,6 +317,18 @@
                     "action": "Navigate",
                     "isComposite": false,
                     "isPartOfComposite": true,
+                    "modifiers": ""
+                },
+                {
+                    "name": "",
+                    "id": "04470b89-5a60-45d9-bc59-44bf4e98a5f2",
+                    "path": "<Gamepad>/dpad",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad",
+                    "action": "Navigate",
+                    "isComposite": false,
+                    "isPartOfComposite": false,
                     "modifiers": ""
                 },
                 {

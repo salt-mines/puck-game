@@ -7,8 +7,6 @@ using UnityEngine.InputSystem.Plugins.UI;
 
 public class GameManager : MonoBehaviour
 {
-    public InputSystemUIInputModule uiInputModule;
-
     public Canvas canvas;
     public EventSystem eventSystem;
     public GameObject pauseMenu;
@@ -48,14 +46,11 @@ public class GameManager : MonoBehaviour
 
         paused = true;
 
-        foreach (var pli in PlayerInput.all)
-        {
-            pli.SwitchCurrentActionMap("UI");
-        }
-
         GameObject menu = Instantiate(pauseMenu, canvas.gameObject.transform);
         menu.GetComponent<PauseMenu>().gameManager = this;
         eventSystem.SetSelectedGameObject(menu.transform.GetChild(0).gameObject);
+
+        Time.timeScale = 0;
     }
 
     internal void Resume()
@@ -63,11 +58,8 @@ public class GameManager : MonoBehaviour
         if (!paused) return;
 
         paused = false;
-        
-        foreach (var pli in PlayerInput.all)
-        {
-            pli.SwitchCurrentActionMap("Game");
-        }
+
+        Time.timeScale = 1;
     }
 
     public void OnCollected(GameObject player)
@@ -85,7 +77,6 @@ public class GameManager : MonoBehaviour
         }
 
         pl.gameObject.transform.SetPositionAndRotation(spawn.transform.position, spawn.transform.rotation);
-        pl.uiInputModule = uiInputModule;
         pl.GetComponent<Player>().gameManager = this;
 
         if (paused)

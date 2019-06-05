@@ -584,24 +584,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_RepeatDelay: 0.5
   m_RepeatRate: 0.1
-  m_ActionsAsset: {fileID: -944628639613478452, guid: ca9f5fa95ffab41fb9a615ab714db018,
+  m_ActionsAsset: {fileID: -944628639613478452, guid: 3eece5c342e9cd843b28d43e993f5920,
     type: 3}
-  m_PointAction: {fileID: 1054132383583890850, guid: ca9f5fa95ffab41fb9a615ab714db018,
+  m_PointAction: {fileID: 1054132383583890850, guid: 3eece5c342e9cd843b28d43e993f5920,
     type: 3}
-  m_MoveAction: {fileID: 3710738434707379630, guid: ca9f5fa95ffab41fb9a615ab714db018,
+  m_MoveAction: {fileID: 3710738434707379630, guid: 3eece5c342e9cd843b28d43e993f5920,
     type: 3}
-  m_SubmitAction: {fileID: 2064916234097673511, guid: ca9f5fa95ffab41fb9a615ab714db018,
+  m_SubmitAction: {fileID: 2064916234097673511, guid: 3eece5c342e9cd843b28d43e993f5920,
     type: 3}
-  m_CancelAction: {fileID: -1967631576421560919, guid: ca9f5fa95ffab41fb9a615ab714db018,
+  m_CancelAction: {fileID: -1967631576421560919, guid: 3eece5c342e9cd843b28d43e993f5920,
     type: 3}
-  m_LeftClickAction: {fileID: 8056856818456041789, guid: ca9f5fa95ffab41fb9a615ab714db018,
+  m_LeftClickAction: {fileID: 8056856818456041789, guid: 3eece5c342e9cd843b28d43e993f5920,
     type: 3}
-  m_MiddleClickAction: {fileID: 3279352641294131588, guid: ca9f5fa95ffab41fb9a615ab714db018,
-    type: 3}
-  m_RightClickAction: {fileID: 3837173908680883260, guid: ca9f5fa95ffab41fb9a615ab714db018,
-    type: 3}
-  m_ScrollWheelAction: {fileID: 4502412055082496612, guid: ca9f5fa95ffab41fb9a615ab714db018,
-    type: 3}
+  m_MiddleClickAction: {fileID: 0}
+  m_RightClickAction: {fileID: 0}
+  m_ScrollWheelAction: {fileID: 0}
   m_Touches: []
   m_TrackedDevices: []
 --- !u!114 &467285536
@@ -1406,6 +1403,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8867d595a9377543a2216a2bb261d94, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  uiInputModule: {fileID: 467285535}
+  canvas: {fileID: 1026297633}
+  eventSystem: {fileID: 467285536}
+  pauseMenu: {fileID: 8813333537259311605, guid: 04d3a1cb8b8c75c499753f96112db1cf,
+    type: 3}
   goalToWin: 10
   playerBlue: {fileID: 0}
   playerRed: {fileID: 0}

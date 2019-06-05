@@ -255,6 +255,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10d386389fba8d34db3a6ffb338387ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameManager: {fileID: 0}
+  playerTeamColor: 0
 --- !u!114 &6813646017879189694
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -267,8 +269,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd8327519a3f4bf4aaf3789cf57ebfdd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
-  rotationSpeed: 4.2
+  speed: 14
+  rotationSpeed: 5
 --- !u!54 &6813646017879189689
 Rigidbody:
   m_ObjectHideFlags: 0

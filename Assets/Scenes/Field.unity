@@ -269,14 +269,6 @@ MonoBehaviour:
   - {fileID: 0}
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!222 &141862403
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 141862400}
-  m_CullTransparentMesh: 0
 --- !u!1 &186271336
 GameObject:
   m_ObjectHideFlags: 0
@@ -781,14 +773,6 @@ MonoBehaviour:
   - {fileID: 0}
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!222 &485117642
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 485117639}
-  m_CullTransparentMesh: 0
 --- !u!1 &664796810
 GameObject:
   m_ObjectHideFlags: 0
@@ -1166,9 +1150,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
-  m_Children:
-  - {fileID: 141862401}
-  - {fileID: 485117640}
+  m_Children: []
   m_Father: {fileID: 218918313}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1435,7 +1417,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canvas: {fileID: 1026297633}
   eventSystem: {fileID: 467285536}
-  pauseMenu: {fileID: 8813333537259311605, guid: 04d3a1cb8b8c75c499753f96112db1cf,
+  pauseMenuPrefab: {fileID: 8813333537259311605, guid: 04d3a1cb8b8c75c499753f96112db1cf,
+    type: 3}
+  startMenuPrefab: {fileID: 8918429389502432546, guid: 534628a9350d0a34597c9d76248c989e,
     type: 3}
   goalToWin: 10
   bluePointsText: {fileID: 141862402}

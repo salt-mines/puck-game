@@ -30,8 +30,11 @@ public class Player : MonoBehaviour
 
     void OnPause(InputValue value)
     {
-        Debug.Log("pause");
+        gameManager.ShowPauseMenu();
+    }
 
-        gameManager.Pause();
+    void OnStartGame(InputValue value)
+    {
+        gameManager.BeginGame();
     }
 }

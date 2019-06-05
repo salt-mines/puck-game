@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using UnityEngine.InputSystem.Plugins.PlayerInput;
 
 public class PauseMenu : MonoBehaviour
 {
@@ -7,14 +6,12 @@ public class PauseMenu : MonoBehaviour
 
     public void OnResume()
     {
-        Debug.Log("Resume");
-
         Destroy(gameObject);
         gameManager.Resume();
     }
 
     public void OnQuit()
     {
-        Debug.Log("Quit");
+        Application.Quit();
     }
 }

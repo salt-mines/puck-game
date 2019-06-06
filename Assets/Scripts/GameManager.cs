@@ -101,6 +101,15 @@ public class GameManager : MonoBehaviour
 
         GameObject menu = Instantiate(newGameMenuPrefab, canvas.gameObject.transform);
         eventSystem.SetSelectedGameObject(menu.transform.GetChild(0).gameObject);
+
+        if (goalToWin <= points[PlayerColors.Red])
+        {
+            menu.GetComponent<NewGameMenu>().SetWinner(PlayerColors.Red);
+        }
+        else if (goalToWin <= points[PlayerColors.Blue])
+        {
+            menu.GetComponent<NewGameMenu>().SetWinner(PlayerColors.Blue);
+        }
     }
 
     internal void Pause()
@@ -123,7 +132,7 @@ public class GameManager : MonoBehaviour
 
     internal void ChangeMowerColor(GameObject mower, PlayerColors color)
     {
-        switch(color)
+        switch (color)
         {
             case PlayerColors.Blue:
                 mower.GetComponentInChildren<MeshRenderer>().material = blueMowerMaterial;
@@ -136,7 +145,7 @@ public class GameManager : MonoBehaviour
 
     public void OnCollected(GameObject player)
     {
-        points[player.GetComponent<Player>().playerTeamColor]+=1;
+        points[player.GetComponent<Player>().playerTeamColor] += 1;
         bluePointsText.text = points[PlayerColors.Blue].ToString();
         redPointsText.text = points[PlayerColors.Red].ToString();
         GameOverCheck();
@@ -157,7 +166,7 @@ public class GameManager : MonoBehaviour
         pl.GetComponent<Player>().playerTeamColor = col;
         pl.gameObject.name = "Player " + pl.playerIndex + " (" + col + ")";
 
-        switch(col)
+        switch (col)
         {
             case PlayerColors.Blue:
                 pl.GetComponentInChildren<SkinnedMeshRenderer>().material = Instantiate(bluePlayerMaterial);

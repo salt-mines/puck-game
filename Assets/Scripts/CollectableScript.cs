@@ -18,9 +18,11 @@ public class CollectableScript : MonoBehaviour
             PuckScript puck = other.gameObject.GetComponentInParent<PuckScript>();
             if (puck.previousPlayerTouched != null)
             {
-                GM.OnCollected(other.gameObject.GetComponentInParent<PuckScript>().previousPlayerTouched);
+                GM.OnCollected(puck.previousPlayerTouched);
                 spawner.currAmount--;
                 Destroy(gameObject);
+
+                puck.Score();
             }
         }
     }

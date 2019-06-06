@@ -15,7 +15,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &9142964429726724948
 Transform:
@@ -57,6 +57,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: fence_model (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: cd816961d9becc04db5a3ea04d2ecd43,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: cd816961d9becc04db5a3ea04d2ecd43,
         type: 3}
@@ -142,6 +147,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: fence_model (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: cd816961d9becc04db5a3ea04d2ecd43,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: cd816961d9becc04db5a3ea04d2ecd43,
         type: 3}

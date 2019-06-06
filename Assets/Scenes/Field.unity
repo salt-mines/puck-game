@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.117301494, g: 0.17979094, b: 0.23426947, a: 1}
+  m_IndirectSpecularColor: {r: 0.12903458, g: 0.24283627, b: 0.36805475, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -830,7 +830,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_BoundingSphereOverride: {x: 0, y: NaN, z: 9.92e-43, w: -3.501623e+13}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -969,7 +969,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 52.044975
+  field of view: 67.31217
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -1288,7 +1288,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967294
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1219814659
 Transform:
@@ -1601,7 +1601,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startAmount: 3
   maxAmount: 5
-  spawnTime: 5
+  spawnTime: 4
   flowerPrefab: {fileID: 2688552906885501658, guid: 107411818b8895347815ee969279e3cd,
     type: 3}
 --- !u!33 &1386643505

@@ -1,5 +1,7 @@
 ﻿using UnityEngine;
 
+[RequireComponent(typeof(Rigidbody))]
+[RequireComponent(typeof(Player))]
 public class PlayerMovement : MonoBehaviour
 {
     public float speed = 10.0f;
@@ -10,6 +12,7 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody body;
 
     private Player player;
+    private Animator animator;
 
     void Start()
     {
@@ -17,6 +20,13 @@ public class PlayerMovement : MonoBehaviour
         player = GetComponent<Player>();
 
         body.maxAngularVelocity = 0;
+
+        animator = GetComponentInChildren<Animator>();
+    }
+
+    void LateUpdate()
+    {
+        animator.SetFloat("Speed", player.throttle);
     }
 
     void FixedUpdate()

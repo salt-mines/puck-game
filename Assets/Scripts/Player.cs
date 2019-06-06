@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.InputSystem.Plugins.PlayerInput;
 
+[RequireComponent(typeof(PlayerInput))]
 public class Player : MonoBehaviour
 {
     public GameManager gameManager;

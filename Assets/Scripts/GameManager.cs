@@ -1,9 +1,10 @@
 ﻿using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem.Plugins.PlayerInput;
-using TMPro;
 
+[RequireComponent(typeof(PlayerInputManager))]
 public class GameManager : MonoBehaviour
 {
     public Canvas canvas;
@@ -17,6 +18,7 @@ public class GameManager : MonoBehaviour
     public Material blueMowerMaterial;
     public Material redMowerMaterial;
 
+    [Range(1, 50)]
     public int goalToWin = 10;
 
     private List<GameObject> spawns = new List<GameObject>();

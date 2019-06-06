@@ -1,19 +1,22 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
+[RequireComponent(typeof(MeshFilter))]
 public class FlowerSpawner : MonoBehaviour
 { 
-    Vector3 min;
-    Vector3 max;
+    private Vector3 min;
+    private Vector3 max;
+    
+    [Range(1, 100)]
+    public int maxAmount = 5;
 
-    public int currAmount;
-    public int maxAmount = 3;
-
-    private float timeElapsed = 0f;
+    [Range(0.1f, 30)]
     public float spawnTime = 5f;
 
+    internal int currAmount;
+    private float timeElapsed = 0f;
+
     public GameObject flowerPrefab;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -36,12 +39,12 @@ public class FlowerSpawner : MonoBehaviour
 
     void SpawnFlower()
     {
-        GameObject Flower = Instantiate(flowerPrefab, 
+        GameObject flower = Instantiate(flowerPrefab, 
                             new Vector3((Random.Range(min.x, max.x) * transform.localScale.x), 
                             flowerPrefab.transform.position.y, 
                             (Random.Range(min.z, max.z) * transform.localScale.z)), 
                             Quaternion.identity);
 
-        Flower.transform.parent = gameObject.transform;
+        flower.transform.parent = gameObject.transform;
     }
 }

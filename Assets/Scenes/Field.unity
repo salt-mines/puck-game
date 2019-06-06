@@ -1573,8 +1573,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28545e021f5d6a441abceee387bb149b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currAmount: 0
-  maxAmount: 3
+  maxAmount: 5
   spawnTime: 5
   flowerPrefab: {fileID: 2688552906885501658, guid: 107411818b8895347815ee969279e3cd,
     type: 3}

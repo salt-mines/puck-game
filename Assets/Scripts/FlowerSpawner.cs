@@ -10,8 +10,9 @@ public class FlowerSpawner : MonoBehaviour
     public int currAmount;
     public int maxAmount = 3;
 
-    private float timeElapsed = 0f;
     public float spawnTime = 5f;
+    private float timeElapsed;
+    
 
     public GameObject flowerPrefab;
     // Start is called before the first frame update
@@ -19,6 +20,8 @@ public class FlowerSpawner : MonoBehaviour
     {
         min = GetComponent<MeshFilter>().mesh.bounds.min;
         max = GetComponent<MeshFilter>().mesh.bounds.max;
+
+        timeElapsed = spawnTime;
     }
 
     // Update is called once per frame

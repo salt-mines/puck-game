@@ -10,6 +10,7 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody body;
 
     private Player player;
+    private Animator animator;
 
     void Start()
     {
@@ -17,6 +18,13 @@ public class PlayerMovement : MonoBehaviour
         player = GetComponent<Player>();
 
         body.maxAngularVelocity = 0;
+
+        animator = GetComponentInChildren<Animator>();
+    }
+
+    void LateUpdate()
+    {
+        animator.SetFloat("Speed", player.throttle);
     }
 
     void FixedUpdate()

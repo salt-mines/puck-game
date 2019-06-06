@@ -5,7 +5,10 @@ public class FlowerSpawner : MonoBehaviour
 { 
     private Vector3 min;
     private Vector3 max;
-    
+
+    [Range(1, 100)]
+    public int startAmount = 3;
+
     [Range(1, 100)]
     public int maxAmount = 5;
 
@@ -23,7 +26,11 @@ public class FlowerSpawner : MonoBehaviour
         min = GetComponent<MeshFilter>().mesh.bounds.min;
         max = GetComponent<MeshFilter>().mesh.bounds.max;
 
-        timeElapsed = spawnTime;
+        while (currAmount < startAmount)
+        {
+            SpawnFlower();
+            currAmount++;
+        }
     }
 
     // Update is called once per frame
@@ -33,7 +40,6 @@ public class FlowerSpawner : MonoBehaviour
         if (currAmount < maxAmount && spawnTime < timeElapsed)
         {
             timeElapsed = 0f;
-            float newSpawnTime = Time.time + spawnTime;
             SpawnFlower();
             currAmount++;
         }

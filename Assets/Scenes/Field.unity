@@ -1002,7 +1002,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 52.029285
+  field of view: 47.419876
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -1452,6 +1452,8 @@ MonoBehaviour:
   pauseMenuPrefab: {fileID: 8813333537259311605, guid: 04d3a1cb8b8c75c499753f96112db1cf,
     type: 3}
   startMenuPrefab: {fileID: 8918429389502432546, guid: 534628a9350d0a34597c9d76248c989e,
+    type: 3}
+  newGameMenuPrefab: {fileID: 8813333537259311605, guid: 9da9d3f74bbefed4ea5d714d26c94256,
     type: 3}
   bluePlayerMaterial: {fileID: 2100000, guid: 22d841e6550ed234c83ced7dfb2d91af, type: 2}
   redPlayerMaterial: {fileID: 2100000, guid: 9974ed529ae30e74cb21f7028d5e7b19, type: 2}

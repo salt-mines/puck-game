@@ -1485,7 +1485,7 @@ MonoBehaviour:
   redPlayerMaterial: {fileID: 2100000, guid: 9974ed529ae30e74cb21f7028d5e7b19, type: 2}
   blueMowerMaterial: {fileID: 2100000, guid: 11f134bd67f7ed24ca4c44e562ffc83b, type: 2}
   redMowerMaterial: {fileID: 2100000, guid: ea28473db019e7e48ad2ac99fe4f9ea1, type: 2}
-  goalToWin: 1
+  goalToWin: 10
   bluePointsText: {fileID: 141862402}
   redPointsText: {fileID: 485117641}
 --- !u!4 &1356577814

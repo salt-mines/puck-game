@@ -49,10 +49,13 @@ public class FlowerSpawner : MonoBehaviour
     {
         GameObject flower = Instantiate(flowerPrefab, 
                             new Vector3((Random.Range(min.x, max.x) * transform.localScale.x), 
-                            flowerPrefab.transform.position.y, 
+                            0, 
                             (Random.Range(min.z, max.z) * transform.localScale.z)), 
                             Quaternion.identity);
 
-        flower.transform.parent = gameObject.transform;
+        //flower.transform.parent = gameObject.transform;
+        flower.transform.localRotation = Quaternion.Euler(0, Random.Range(-180, 180), 0);
+        
+        flower.GetComponentInChildren<Animator>().speed = Random.Range(0.8f, 1.2f);
     }
 }

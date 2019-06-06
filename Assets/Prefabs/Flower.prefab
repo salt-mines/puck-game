@@ -16,7 +16,7 @@ GameObject:
   m_TagString: Collectible
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &2688552906885501654
 Transform:
@@ -59,6 +59,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc457b9873b465844a8b8ea3fd95ff66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &6061570046037145385
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4745355404588549412}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a7a5f3467b0bb124a8fe4cc776cb777f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &3673545929894681645
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -70,6 +89,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: flowermodel2
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 5acc6f5182dc96a4cac5c362560b0096,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 5acc6f5182dc96a4cac5c362560b0096,
         type: 3}
@@ -133,6 +157,12 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 9db16fa900405494f9825caf163e9d43, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5acc6f5182dc96a4cac5c362560b0096, type: 3}
+--- !u!1 &4745355404588549412 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: 5acc6f5182dc96a4cac5c362560b0096,
+    type: 3}
+  m_PrefabInstance: {fileID: 3673545929894681645}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &8611368754484213559 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 5acc6f5182dc96a4cac5c362560b0096,

@@ -9,7 +9,7 @@ public class CollectableScript : MonoBehaviour
     void Start()
     {
         GM = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameManager>();
-        spawner = GetComponentInParent<FlowerSpawner>();
+        spawner = GameObject.FindGameObjectWithTag("CollectibleSpawner").GetComponent<FlowerSpawner>();
     }
 
     private void OnTriggerEnter(Collider other)

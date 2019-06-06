@@ -52,11 +52,6 @@ public class GameManager : MonoBehaviour
         ShowStartMenu();
     }
 
-    void Update()
-    {
-      
-    }
-
     void GameOverCheck()
     {
         if (goalToWin <= points[PlayerColors.Red] || goalToWin <= points[PlayerColors.Blue])
@@ -165,10 +160,19 @@ public class GameManager : MonoBehaviour
         switch(col)
         {
             case PlayerColors.Blue:
-                pl.GetComponentInChildren<SkinnedMeshRenderer>().material = bluePlayerMaterial;
+                pl.GetComponentInChildren<SkinnedMeshRenderer>().material = Instantiate(bluePlayerMaterial);
+                if (pl.playerIndex > 1)
+                {
+                    pl.GetComponentInChildren<SkinnedMeshRenderer>().material.color = new Color(0.5f, 0.5f, 0.5f);
+                }
+
                 break;
             case PlayerColors.Red:
-                pl.GetComponentInChildren<SkinnedMeshRenderer>().material = redPlayerMaterial;
+                pl.GetComponentInChildren<SkinnedMeshRenderer>().material = Instantiate(redPlayerMaterial);
+                if (pl.playerIndex > 1)
+                {
+                    pl.GetComponentInChildren<SkinnedMeshRenderer>().material.color = new Color(0.7f, 0.7f, 0.7f);
+                }
                 break;
         }
     }

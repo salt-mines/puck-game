@@ -22,6 +22,8 @@ public class FlowerSpawner : MonoBehaviour
     {
         min = GetComponent<MeshFilter>().mesh.bounds.min;
         max = GetComponent<MeshFilter>().mesh.bounds.max;
+
+        timeElapsed = spawnTime;
     }
 
     // Update is called once per frame

@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
     public EventSystem eventSystem;
     public GameObject pauseMenuPrefab;
     public GameObject startMenuPrefab;
+    public GameObject newGameMenuPrefab;
 
     public Material bluePlayerMaterial;
     public Material redPlayerMaterial;
@@ -51,7 +52,7 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
-        GameOverCheck();
+      
     }
 
     void GameOverCheck()
@@ -59,11 +60,7 @@ public class GameManager : MonoBehaviour
         if (goalToWin <= points[PlayerColors.Red] || goalToWin <= points[PlayerColors.Blue])
         {
             isGameOver = true;
-            ShowPauseMenu();
-        }
-        else
-        {
-            isGameOver = false;
+            ShowNewGameMenu();
         }
     }
 
@@ -96,6 +93,16 @@ public class GameManager : MonoBehaviour
 
         GameObject menu = Instantiate(pauseMenuPrefab, canvas.gameObject.transform);
         menu.GetComponent<PauseMenu>().gameManager = this;
+        eventSystem.SetSelectedGameObject(menu.transform.GetChild(0).gameObject);
+    }
+
+    internal void ShowNewGameMenu()
+    {
+        if (!isGameOver) return;
+
+        Pause();
+
+        GameObject menu = Instantiate(newGameMenuPrefab, canvas.gameObject.transform);
         eventSystem.SetSelectedGameObject(menu.transform.GetChild(0).gameObject);
     }
 
@@ -135,6 +142,7 @@ public class GameManager : MonoBehaviour
         points[player.GetComponent<Player>().playerTeamColor]+=1;
         bluePointsText.text = points[PlayerColors.Blue].ToString();
         redPointsText.text = points[PlayerColors.Red].ToString();
+        GameOverCheck();
     }
 
     void OnPlayerJoined(PlayerInput pl)
